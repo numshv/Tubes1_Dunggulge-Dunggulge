@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <RootNamespace>Smart_Calendar1874</RootNamespace>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net9.0</TargetFramework>
+        <LangVersion>10.0</LangVersion>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Robocode.TankRoyale.BotApi" Version="0.30.0" />
+        <PackageReference Include="System.Drawing.Common" Version="9.0.3" />
+    </ItemGroup>
+</Project>

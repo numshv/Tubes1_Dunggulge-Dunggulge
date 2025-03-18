@@ -1,0 +1,221 @@
+using System;
+using System.Drawing;
+using Robocode.TankRoyale.BotApi;
+using Robocode.TankRoyale.BotApi.Events;
+
+class Smart_Calendar1874 : Bot
+{
+    private ScannedBotEvent? targetBot = null;
+    private double targetSpeed = double.MaxValue;
+    private List<ScannedBotEvent> scannedBots = new List<ScannedBotEvent>();
+    private int? targetBotId = null;
+
+    static void Main(string[] args)
+    {
+        new Smart_Calendar1874().Start();
+    }
+
+    Smart_Calendar1874() : base(BotInfo.FromFile("Smart_Calendar1874.json")) { }
+
+    public override void Run()
+    {
+        BodyColor = Color.Red;
+        TurretColor = Color.Black;
+        RadarColor = Color.Yellow;
+        BulletColor = Color.Green;
+        ScanColor = Color.Green;
+        
+        while (IsRunning)
+        {
+            // Continue scanning
+            TurnRadarRight(10); 
+        }
+    }
+
+    public override void OnScannedBot(ScannedBotEvent e)
+    {
+        if (targetBotId == null || targetBotId != e.ScannedBotId)
+        {
+            targetBotId = e.ScannedBotId;
+            targetSpeed = e.Speed;
+        }
+
+        if (targetBotId == e.ScannedBotId)
+        {
+            AdjustAimAndMove();
+            SmartFire(GetDistanceToBot(e), e.Speed);
+        }
+    }
+
+    private ScannedBotEvent? scannedBot = null;
+    private double predictedAngle = 0;
+
+    private void ScanMovement()
+    {
+        if (scannedBot == null)
+        {
+            // No bot detected, scan by rotating progressively in 360 degrees
+            TurnRadarRight(45); // Incrementally scan in large steps
+            TurnGunRight(20);
+            return;
+        }
+
+        double botBearing = BearingTo(scannedBot.X, scannedBot.Y); // Get current bot bearing
+        double angleDifference = Math.Abs(botBearing - RadarDirection);
+
+        if (scannedBot != null && scannedBot.ScannedBotId == targetBotId)
+        {
+            // The bot is still in radar range, keep tracking it
+            double predictedX = scannedBot.X + scannedBot.Speed * Math.Cos(DegreesToRadians(scannedBot.Direction));
+            double predictedY = scannedBot.Y + scannedBot.Speed * Math.Sin(DegreesToRadians(scannedBot.Direction));
+            predictedAngle = BearingTo(predictedX, predictedY);
+
+            // Adjust radar movement to track the target
+            TurnRadarRight(predictedAngle - RadarDirection);
+
+            // Adjust gun movement (max 20 degrees per tick)
+            double gunTurn = NormalizeBearing(predictedAngle - GunDirection);
+            TurnGunRight(Clamp(gunTurn, -20, 20));
+        }
+        else
+        {
+            // If the target is lost, find a new target based on the slowest speed
+            scannedBot = GetSlowestBotInScanner();
+            if (scannedBot != null)
+            {
+                targetBotId = scannedBot.ScannedBotId;
+                predictedAngle = BearingTo(scannedBot.X, scannedBot.Y);
+                TurnRadarRight(predictedAngle - RadarDirection);
+
+                // Adjust gun movement to new target
+                double gunTurn = NormalizeBearing(predictedAngle - GunDirection);
+                TurnGunRight(Clamp(gunTurn, -20, 20));
+            }
+            else
+            {
+                // No bots found, resume full scanning
+                scannedBot = null;
+                TurnRadarRight(45);
+                TurnGunRight(20);
+            }
+        }
+    }
+
+
+    private ScannedBotEvent? GetSlowestBotInScanner()
+    {
+        ScannedBotEvent? slowestBot = null;
+        double minSpeed = double.MaxValue;
+
+        foreach (var bot in scannedBots)
+        {
+            if (bot.Speed < minSpeed)
+            {
+                slowestBot = bot;
+                minSpeed = bot.Speed;
+            }
+        }
+
+        return slowestBot;
+    }
+
+    // Converts degrees to radians
+    private double DegreesToRadians(double degrees)
+    {
+        return degrees * Math.PI / 180.0;
+    }
+
+    // Gets the bearing to a point (x, y) from the bot's position
+    private double BearingTo(double x, double y)
+    {
+        double dx = x - X;
+        double dy = y - Y;
+        return Math.Atan2(dy, dx) * (180.0 / Math.PI);
+    }
+
+
+    private void BotMovement()
+    {
+        if (Energy > 25)
+        {
+            if (targetBot != null)
+            {
+                double targetBearing = BearingTo(targetBot.X, targetBot.Y);
+                double angleDifference = NormalizeBearing(targetBearing - Direction);
+
+                if (Math.Abs(angleDifference) < 5) // If already facing target, move forward
+                {
+                    Forward(100);
+                }
+                else // Rotate to match the target direction
+                {
+                    TurnRight(Math.Sign(angleDifference) * 10);
+                }
+            }
+            else // No target, rotate body clockwise
+            {
+                TurnRight(10);
+            }
+        }
+        else // Low energy, move defensively
+        {
+            double distanceToWall = GetDistanceToNearestWall();
+            if (distanceToWall > 15)
+            {
+                MoveToNearestWall(15);
+            }
+            else
+            {
+                PatrolArenaBorder(15);
+            }
+        }
+    }
+
+    private double NormalizeBearing(double angle)
+    {
+        while (angle > 180) angle -= 360;
+        while (angle < -180) angle += 360;
+        return angle;
+    }
+
+    private double GetDistanceToNearestWall()
+    {
+        double distanceToLeft = X;
+        double distanceToRight = BattlefieldWidth - X;
+        double distanceToTop = BattlefieldHeight - Y;
+        double distanceToBottom = Y;
+
+        return Math.Min(Math.Min(distanceToLeft, distanceToRight), Math.Min(distanceToTop, distanceToBottom));
+    }
+
+    private void MoveToNearestWall(double stopDistance)
+    {
+        double left = X;
+        double right = BattlefieldWidth - X;
+        double top = BattlefieldHeight - Y;
+        double bottom = Y;
+
+        if (left < right && left < stopDistance) SetTurnLeft(Direction);
+        else if (right < stopDistance) SetTurnRight(Direction);
+        else if (top < bottom && top < stopDistance) SetTurnRight(Direction);
+        else if (bottom < stopDistance) SetTurnLeft(Direction);
+
+        Forward(stopDistance);
+    }
+
+    private void PatrolArenaBorder(double distanceFromWall)
+    {
+        // Keep a safe distance from walls while moving around the perimeter
+        if (X < distanceFromWall || X > BattlefieldWidth - distanceFromWall ||
+            Y < distanceFromWall || Y > BattlefieldHeight - distanceFromWall)
+        {
+            TurnRight(90);
+        }
+        Forward(100);
+    }
+
+
+
+
+
+}
