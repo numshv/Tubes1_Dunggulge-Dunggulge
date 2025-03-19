@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Syifa\\Desktop\\sample-bots\\Smart_Calendar1874\\Smart_Calendar1874.csproj": {}
+    "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\Smart_Calendar1874\\Smart_Calendar1874.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Syifa\\Desktop\\sample-bots\\Smart_Calendar1874\\Smart_Calendar1874.csproj": {
+    "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\Smart_Calendar1874\\Smart_Calendar1874.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Syifa\\Desktop\\sample-bots\\Smart_Calendar1874\\Smart_Calendar1874.csproj",
+        "projectUniqueName": "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\Smart_Calendar1874\\Smart_Calendar1874.csproj",
         "projectName": "Smart_Calendar1874",
-        "projectPath": "C:\\Users\\Syifa\\Desktop\\sample-bots\\Smart_Calendar1874\\Smart_Calendar1874.csproj",
+        "projectPath": "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\Smart_Calendar1874\\Smart_Calendar1874.csproj",
         "packagesPath": "C:\\Users\\Syifa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Syifa\\Desktop\\sample-bots\\Smart_Calendar1874\\obj\\",
+        "outputPath": "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\Smart_Calendar1874\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Syifa\\AppData\\Roaming\\NuGet\\NuGet.Config"

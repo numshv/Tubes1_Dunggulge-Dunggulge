@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Syifa\\Desktop\\sample-bots\\PaintingBot\\PaintingBot.csproj": {}
+    "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\PaintingBot\\PaintingBot.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Syifa\\Desktop\\sample-bots\\PaintingBot\\PaintingBot.csproj": {
+    "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\PaintingBot\\PaintingBot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Syifa\\Desktop\\sample-bots\\PaintingBot\\PaintingBot.csproj",
+        "projectUniqueName": "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\PaintingBot\\PaintingBot.csproj",
         "projectName": "PaintingBot",
-        "projectPath": "C:\\Users\\Syifa\\Desktop\\sample-bots\\PaintingBot\\PaintingBot.csproj",
+        "projectPath": "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\PaintingBot\\PaintingBot.csproj",
         "packagesPath": "C:\\Users\\Syifa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Syifa\\Desktop\\sample-bots\\PaintingBot\\obj\\",
+        "outputPath": "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\PaintingBot\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Syifa\\AppData\\Roaming\\NuGet\\NuGet.Config"

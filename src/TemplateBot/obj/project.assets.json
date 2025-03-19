@@ -823,11 +823,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Syifa\\Desktop\\sample-bots\\TemplateBot\\TemplateBot.csproj",
+      "projectUniqueName": "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\TemplateBot\\TemplateBot.csproj",
       "projectName": "TemplateBot",
-      "projectPath": "C:\\Users\\Syifa\\Desktop\\sample-bots\\TemplateBot\\TemplateBot.csproj",
+      "projectPath": "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\TemplateBot\\TemplateBot.csproj",
       "packagesPath": "C:\\Users\\Syifa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Syifa\\Desktop\\sample-bots\\TemplateBot\\obj\\",
+      "outputPath": "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\TemplateBot\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Syifa\\AppData\\Roaming\\NuGet\\NuGet.Config"

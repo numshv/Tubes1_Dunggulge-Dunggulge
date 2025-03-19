@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TemplateBot")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a4d1fe69ca21b41145801ab7066a3f57f1d90672")]
 [assembly: System.Reflection.AssemblyProductAttribute("TemplateBot")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TemplateBot")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

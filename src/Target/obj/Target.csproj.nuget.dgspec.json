@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Syifa\\Desktop\\sample-bots\\Target\\Target.csproj": {}
+    "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\Target\\Target.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Syifa\\Desktop\\sample-bots\\Target\\Target.csproj": {
+    "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\Target\\Target.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Syifa\\Desktop\\sample-bots\\Target\\Target.csproj",
+        "projectUniqueName": "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\Target\\Target.csproj",
         "projectName": "Target",
-        "projectPath": "C:\\Users\\Syifa\\Desktop\\sample-bots\\Target\\Target.csproj",
+        "projectPath": "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\Target\\Target.csproj",
         "packagesPath": "C:\\Users\\Syifa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Syifa\\Desktop\\sample-bots\\Target\\obj\\",
+        "outputPath": "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\Target\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Syifa\\AppData\\Roaming\\NuGet\\NuGet.Config"

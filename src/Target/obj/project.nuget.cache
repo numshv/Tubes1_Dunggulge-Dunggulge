@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WRH8A9Bojxk=",
+  "dgSpecHash": "HOuRhTMGUPs=",
   "success": false,
-  "projectFilePath": "C:\\Users\\Syifa\\Desktop\\sample-bots\\Target\\Target.csproj",
+  "projectFilePath": "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\Target\\Target.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Syifa\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\Syifa\\.nuget\\packages\\microsoft.extensions.configuration.binder\\8.0.2\\microsoft.extensions.configuration.binder.8.0.2.nupkg.sha512",
