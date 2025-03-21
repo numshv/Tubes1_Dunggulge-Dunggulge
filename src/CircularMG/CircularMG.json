@@ -1,0 +1,10 @@
+{
+  "name": "CircularMG",
+  "version": "1.0",
+  "authors": ["Clarissa N. Tambunan"],
+  "description": "A bot that drives in cicular motion and shoots at the same time.",
+  "homepage": "",
+  "countryCodes": ["id"],
+  "platform": ".Net 6.0",
+  "programmingLang": "C# 10.0"
+}
