@@ -6,6 +6,7 @@ using Robocode.TankRoyale.BotApi.Events;
 public class Kotak : Bot
 {
     int turnCounter;
+    int hitByBulletCounter;
     // The main method starts our bot
     static void Main(string[] args)
     {
@@ -29,7 +30,6 @@ public class Kotak : Bot
 
         // Repeat while the bot is running
 		turnCounter = 0;
-
         FindTargetPosition();
         
         // AdjustGunForBodyTurn = false;  // Gun does not turn with body
@@ -43,16 +43,7 @@ public class Kotak : Bot
             TargetSpeed = 6;
             Forward(300);
             TurnLeft(90);
-            // TurnGunRight(360);
-            Forward(300);
-            TurnLeft(90);
-            // TurnGunRight(360);
-            Forward(300);
-            TurnLeft(90);
-            // TurnGunRight(360);
-            Forward(300);
-            TurnLeft(90);
-            // TurnGunRight(360);
+            TurnGunRight(360);
 
         }
     }
@@ -64,7 +55,7 @@ public class Kotak : Bot
         
         Forward(Math.Sqrt((targetX - X) * (targetX - X) + (targetY - Y) * (targetY - Y)));
 
-        TurnLeft(360-Direction);
+        //TurnLeft(360-Direction);
     }
 
     public override void OnScannedBot(ScannedBotEvent e)
@@ -79,6 +70,7 @@ public class Kotak : Bot
 
     public override void OnHitWall(HitWallEvent e)
     {
+        Back(20);
         FindTargetPosition();
     }
 
@@ -100,10 +92,20 @@ public class Kotak : Bot
 
     public override void OnHitByBullet(HitByBulletEvent e)
     {
-        // double dir = e.Bullet.Direction;
-        // TurnRadarRight(dir);
-        // Fire(1);
-        TargetSpeed = 8;
+        TargetSpeed = 8; // Set the bot's speed to 8 when hit by a bullet
+        hitByBulletCounter = 0; // Reset the counter each time a bullet hits the bot
+    }
+
+    public override void OnTick(TickEvent e)
+    {
+        if (hitByBulletCounter > 100) // After 100 turns (you can adjust this number)
+        {
+            TargetSpeed = 6; // Reset speed back to original speed
+        }
+        else
+        {
+            hitByBulletCounter++; // Increase counter
+        }
     }
 
 }
