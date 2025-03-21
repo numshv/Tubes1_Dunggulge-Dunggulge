@@ -6,7 +6,7 @@ using Robocode.TankRoyale.BotApi.Events;
 public class Smart_Calendar1874 : Bot
 {
 
-    private const double SAFE_DISTANCE = 25; 
+    private const double SAFE_DISTANCE = 50; 
     private double targetX, targetY;
 
     // The main method starts our bot
@@ -15,13 +15,10 @@ public class Smart_Calendar1874 : Bot
         new Smart_Calendar1874().Start();
     }
 
-    // Constructor, which loads the bot config file
     Smart_Calendar1874() : base(BotInfo.FromFile("Smart_Calendar1874.json")) { }
 
-    // Called when a new round is started -> initialize and do some movement
     public override void Run()
     {
-        // Set colors
         BodyColor = Color.Red;
         TurretColor = Color.Black;
         RadarColor = Color.Yellow;
@@ -38,11 +35,11 @@ public class Smart_Calendar1874 : Bot
 
         BodyColor = Color.Yellow;
         TurnLeft(90);
-        // Spin gun back and forth
+        TurnGunLeft(20);
         while (IsRunning)
         {
-            TurnGunRight(180);
-            TurnGunLeft(180);
+            TurnGunRight(220);
+            TurnGunLeft(220);
         }
     }
 
@@ -82,17 +79,26 @@ public class Smart_Calendar1874 : Bot
         double angleToWall = Math.Atan2(targetY - Y, targetX - X) * 180 / Math.PI;
         double oppositeAngle = (angleToWall + 180) % 360; // Exact opposite direction
         
-        TurnTo(oppositeAngle);
+        TurnBodyTo(oppositeAngle);
         Back(Math.Sqrt((targetX - X) * (targetX - X) + (targetY - Y) * (targetY - Y)));
     }
 
-    private void TurnTo(double angle)
+    private void TurnBodyTo(double angle)
     {
         double turnAngle = angle - Direction;
         if (turnAngle > 180) turnAngle -= 360;
         else if (turnAngle < -180) turnAngle += 360;
 
         TurnLeft(turnAngle);
+    }
+
+    private void TurnGunTo(double angle)
+    {
+        double turnAngle = angle - Direction;
+        if (turnAngle > 180) turnAngle -= 360;
+        else if (turnAngle < -180) turnAngle += 360;
+
+        TurnGunLeft(turnAngle);
     }
 
     private bool OnTargetWallCoord()
@@ -109,11 +115,9 @@ public class Smart_Calendar1874 : Bot
         SmartFire(distance);
     }
 
-    // Custom fire method that determines firepower based on distance.
-    // distance: The distance to the bot to fire at.
     private void SmartFire(double distance)
     {
-        if (distance > 200 || Energy < 15)
+        if (distance > 200 || Energy < 25)
             Fire(1);
         else if (distance > 50)
             Fire(2);
@@ -121,25 +125,85 @@ public class Smart_Calendar1874 : Bot
             Fire(3);
     }
 
-    // We died -> figure out if we need to switch to another corner
 
-  
+    private void MoveWhenHit()
+    {
+        // 2. If near a corner, turn right 90°
+        if (IsNearCorner())
+        {
+            TurnRight(90);
+        }
+        // 1. Move forward 100 units when hit
+        Forward(100);
+
+    }
+
     private bool IsNearCorner()
     {
-        return X < SAFE_DISTANCE || X > (ArenaWidth - SAFE_DISTANCE) ||
-            Y < SAFE_DISTANCE || Y > (ArenaHeight - SAFE_DISTANCE);
+        return (X <= SAFE_DISTANCE || X >= (ArenaWidth - SAFE_DISTANCE)) &&
+           ( Y <= SAFE_DISTANCE || Y >= (ArenaHeight - SAFE_DISTANCE));
     }
 
-    // Helper function to calculate bearing to a point
-    private double BearingTo(double targetX, double targetY)
+    public override void OnHitByBullet(HitByBulletEvent e)
     {
-        return Math.Atan2(targetY - Y, targetX - X) * 180 / Math.PI;
+        MoveWhenHit();
     }
 
-    // Event: When an enemy fires a bullet
-    public override void OnBulletFired(BulletFiredEvent e)
-    {
-        DodgeBullet(e);
-    }
+    // public override void OnHitWall(HitWallEvent e){
+    //     double bearing = CalcBearing(Direction);
+    //     if(bearing >= -90 && bearing <= 90){
+    //         Back(50);
+    //     }else{
+    //         Forward(50);
+    //     }
+    //     Readjust();
+    //     TurnLeft(90);
+
+    // }
+
+    // private void Readjust()
+    // {
+    //     double distanceToNorth = ArenaHeight - Y;
+    //     double distanceToSouth = Y;
+    //     double distanceToEast = ArenaWidth - X;
+    //     double distanceToWest = X;
+
+    //     // Find the nearest wall
+    //     double minDistance = Math.Min(Math.Min(distanceToNorth, distanceToSouth), Math.Min(distanceToEast, distanceToWest));
+
+    //     double targetAngle;
+
+    //     if (minDistance == distanceToNorth) // Move to top wall
+    //     {
+    //         targetAngle = 270; // Face upward
+    //         TurnBodyTo(targetAngle);
+    //         TurnGunTo(targetAngle);
+    //         Back(distanceToNorth - SAFE_DISTANCE);
+    //     }
+    //     else if (minDistance == distanceToSouth) // Move to bottom wall
+    //     {
+    //         targetAngle = 90; // Face downward
+    //         TurnBodyTo(targetAngle);
+    //         TurnGunTo(targetAngle);
+    //         Back(distanceToSouth - SAFE_DISTANCE);
+    //     }
+    //     else if (minDistance == distanceToEast) // Move to right wall
+    //     {
+    //         targetAngle = 180; // Face left
+    //         TurnBodyTo(targetAngle);
+    //         TurnGunTo(targetAngle);
+    //         Back(distanceToEast - SAFE_DISTANCE);
+    //     }
+    //     else // Move to left wall
+    //     {
+    //         targetAngle = 0; // Face right
+    //         TurnBodyTo(targetAngle);
+    //         TurnGunTo(targetAngle);
+    //         Back(distanceToWest - SAFE_DISTANCE);
+    //     }
+    // }
+
+
+
 
 }

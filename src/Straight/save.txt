@@ -143,4 +143,9 @@ public class Straight : Bot
             Fire(3);
     }
 
+
+
+
+
+
 }
