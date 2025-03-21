@@ -1,0 +1,10 @@
+{
+  "name": "Kotak",
+  "version": "1.0",
+  "authors": ["Mayla Yaffa"],
+  "description": "A bot that drives kotakly",
+  "homepage": "",
+  "countryCodes": ["id"],
+  "platform": ".Net 9.0",
+  "programmingLang": "C# 10.0"
+}
