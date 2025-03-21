@@ -822,11 +822,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mayla\\Documents\\Kuliah\\Semester-4\\Strategi-Algoritma\\tubes1-if2211-starter-pack-1.0\\RobotLala\\RobotLala.csproj",
-      "projectName": "RobotLala",
-      "projectPath": "C:\\Users\\Mayla\\Documents\\Kuliah\\Semester-4\\Strategi-Algoritma\\tubes1-if2211-starter-pack-1.0\\RobotLala\\RobotLala.csproj",
+      "projectUniqueName": "C:\\Users\\Mayla\\Documents\\Kuliah\\Semester-4\\Strategi-Algoritma\\Tubes1_Dunggulge-Dunggulge\\src\\Satu\\Satu.csproj",
+      "projectName": "Satu",
+      "projectPath": "C:\\Users\\Mayla\\Documents\\Kuliah\\Semester-4\\Strategi-Algoritma\\Tubes1_Dunggulge-Dunggulge\\src\\Satu\\Satu.csproj",
       "packagesPath": "C:\\Users\\Mayla\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mayla\\Documents\\Kuliah\\Semester-4\\Strategi-Algoritma\\tubes1-if2211-starter-pack-1.0\\RobotLala\\obj\\",
+      "outputPath": "C:\\Users\\Mayla\\Documents\\Kuliah\\Semester-4\\Strategi-Algoritma\\Tubes1_Dunggulge-Dunggulge\\src\\Satu\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Mayla\\AppData\\Roaming\\NuGet\\NuGet.Config"

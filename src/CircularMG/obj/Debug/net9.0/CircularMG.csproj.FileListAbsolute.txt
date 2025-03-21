@@ -1,32 +1,33 @@
-D:\Tubes 1 Stima\CircularMG\bin\Debug\net9.0\CircularMG.exe
-D:\Tubes 1 Stima\CircularMG\bin\Debug\net9.0\CircularMG.deps.json
-D:\Tubes 1 Stima\CircularMG\bin\Debug\net9.0\CircularMG.runtimeconfig.json
-D:\Tubes 1 Stima\CircularMG\bin\Debug\net9.0\CircularMG.dll
-D:\Tubes 1 Stima\CircularMG\bin\Debug\net9.0\CircularMG.pdb
-D:\Tubes 1 Stima\CircularMG\bin\Debug\net9.0\Microsoft.Build.Locator.dll
-D:\Tubes 1 Stima\CircularMG\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll
-D:\Tubes 1 Stima\CircularMG\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
-D:\Tubes 1 Stima\CircularMG\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Binder.dll
-D:\Tubes 1 Stima\CircularMG\bin\Debug\net9.0\Microsoft.Extensions.Configuration.FileExtensions.dll
-D:\Tubes 1 Stima\CircularMG\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Json.dll
-D:\Tubes 1 Stima\CircularMG\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Abstractions.dll
-D:\Tubes 1 Stima\CircularMG\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Physical.dll
-D:\Tubes 1 Stima\CircularMG\bin\Debug\net9.0\Microsoft.Extensions.FileSystemGlobbing.dll
-D:\Tubes 1 Stima\CircularMG\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
-D:\Tubes 1 Stima\CircularMG\bin\Debug\net9.0\Microsoft.Win32.SystemEvents.dll
-D:\Tubes 1 Stima\CircularMG\bin\Debug\net9.0\Newtonsoft.Json.dll
-D:\Tubes 1 Stima\CircularMG\bin\Debug\net9.0\Robocode.TankRoyale.BotApi.dll
-D:\Tubes 1 Stima\CircularMG\bin\Debug\net9.0\SVG.dll
-D:\Tubes 1 Stima\CircularMG\bin\Debug\net9.0\System.Drawing.Common.dll
-D:\Tubes 1 Stima\CircularMG\bin\Debug\net9.0\runtimes\win\lib\net8.0\Microsoft.Win32.SystemEvents.dll
-D:\Tubes 1 Stima\CircularMG\obj\Debug\net9.0\CircularMG.csproj.AssemblyReference.cache
-D:\Tubes 1 Stima\CircularMG\obj\Debug\net9.0\CircularMG.GeneratedMSBuildEditorConfig.editorconfig
-D:\Tubes 1 Stima\CircularMG\obj\Debug\net9.0\CircularMG.AssemblyInfoInputs.cache
-D:\Tubes 1 Stima\CircularMG\obj\Debug\net9.0\CircularMG.AssemblyInfo.cs
-D:\Tubes 1 Stima\CircularMG\obj\Debug\net9.0\CircularMG.csproj.CoreCompileInputs.cache
-D:\Tubes 1 Stima\CircularMG\obj\Debug\net9.0\CircularMG.csproj.Up2Date
-D:\Tubes 1 Stima\CircularMG\obj\Debug\net9.0\CircularMG.dll
-D:\Tubes 1 Stima\CircularMG\obj\Debug\net9.0\refint\CircularMG.dll
-D:\Tubes 1 Stima\CircularMG\obj\Debug\net9.0\CircularMG.pdb
-D:\Tubes 1 Stima\CircularMG\obj\Debug\net9.0\CircularMG.genruntimeconfig.cache
-D:\Tubes 1 Stima\CircularMG\obj\Debug\net9.0\ref\CircularMG.dll
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\bin\Debug\net9.0\CircularMG.exe
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\bin\Debug\net9.0\CircularMG.deps.json
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\bin\Debug\net9.0\CircularMG.runtimeconfig.json
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\bin\Debug\net9.0\CircularMG.dll
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\bin\Debug\net9.0\CircularMG.pdb
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\bin\Debug\net9.0\Microsoft.Build.Locator.dll
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\bin\Debug\net9.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\bin\Debug\net9.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\bin\Debug\net9.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\bin\Debug\net9.0\Newtonsoft.Json.dll
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\bin\Debug\net9.0\Robocode.TankRoyale.BotApi.dll
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\bin\Debug\net9.0\SVG.dll
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\bin\Debug\net9.0\System.Drawing.Common.dll
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\bin\Debug\net9.0\runtimes\win\lib\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\obj\Debug\net9.0\CircularMG.csproj.AssemblyReference.cache
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\obj\Debug\net9.0\CircularMG.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\obj\Debug\net9.0\CircularMG.AssemblyInfoInputs.cache
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\obj\Debug\net9.0\CircularMG.AssemblyInfo.cs
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\obj\Debug\net9.0\CircularMG.csproj.CoreCompileInputs.cache
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\obj\Debug\net9.0\CircularMG.sourcelink.json
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\obj\Debug\net9.0\CircularMG.csproj.Up2Date
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\obj\Debug\net9.0\CircularMG.dll
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\obj\Debug\net9.0\refint\CircularMG.dll
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\obj\Debug\net9.0\CircularMG.pdb
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\obj\Debug\net9.0\CircularMG.genruntimeconfig.cache
+C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\CircularMG\obj\Debug\net9.0\ref\CircularMG.dll
