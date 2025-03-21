@@ -107,7 +107,7 @@ public class Smart_Calendar1874 : Bot
 
     private void SmartFire(double distance)
     {
-        if (distance > 200 || Energy < 15)
+        if (distance > 200 || Energy < 25)
             Fire(1);
         else if (distance > 50)
             Fire(2);
@@ -119,6 +119,7 @@ public class Smart_Calendar1874 : Bot
     private void MoveWhenHit()
     {
         // 1. Move forward 100 units when hit
+        TargetSpeed = 8;
         Forward(100);
 
         // 2. If near a corner, turn right 90°
@@ -138,4 +139,16 @@ public class Smart_Calendar1874 : Bot
     {
         MoveWhenHit();
     }
+
+    public override void OnHitWall(HitWallEvent e){
+        double bearing = CalcBearing(Direction);
+        if(bearing >= -90 && bearing <= 90){
+            Back(50);
+        }else{
+            Forward(50);
+        }
+        FindNearestWall();
+        MoveToNearestWall();
+    }
+
 }
