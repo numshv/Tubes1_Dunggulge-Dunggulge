@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Syifa\\Desktop\\sample-bots-csharp-0.30.1\\MyFirstLeader\\MyFirstLeader.csproj": {}
+    "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\MyFirstLeader\\MyFirstLeader.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Syifa\\Desktop\\sample-bots-csharp-0.30.1\\MyFirstLeader\\MyFirstLeader.csproj": {
+    "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\MyFirstLeader\\MyFirstLeader.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Syifa\\Desktop\\sample-bots-csharp-0.30.1\\MyFirstLeader\\MyFirstLeader.csproj",
+        "projectUniqueName": "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\MyFirstLeader\\MyFirstLeader.csproj",
         "projectName": "MyFirstLeader",
-        "projectPath": "C:\\Users\\Syifa\\Desktop\\sample-bots-csharp-0.30.1\\MyFirstLeader\\MyFirstLeader.csproj",
+        "projectPath": "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\MyFirstLeader\\MyFirstLeader.csproj",
         "packagesPath": "C:\\Users\\Syifa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Syifa\\Desktop\\sample-bots-csharp-0.30.1\\MyFirstLeader\\obj\\",
+        "outputPath": "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\MyFirstLeader\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Syifa\\AppData\\Roaming\\NuGet\\NuGet.Config"

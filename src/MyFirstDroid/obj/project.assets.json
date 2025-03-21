@@ -217,11 +217,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Syifa\\Desktop\\sample-bots\\MyFirstDroid\\MyFirstDroid.csproj",
+      "projectUniqueName": "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\MyFirstDroid\\MyFirstDroid.csproj",
       "projectName": "MyFirstDroid",
-      "projectPath": "C:\\Users\\Syifa\\Desktop\\sample-bots\\MyFirstDroid\\MyFirstDroid.csproj",
+      "projectPath": "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\MyFirstDroid\\MyFirstDroid.csproj",
       "packagesPath": "C:\\Users\\Syifa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Syifa\\Desktop\\sample-bots\\MyFirstDroid\\obj\\",
+      "outputPath": "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\MyFirstDroid\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Syifa\\AppData\\Roaming\\NuGet\\NuGet.Config"

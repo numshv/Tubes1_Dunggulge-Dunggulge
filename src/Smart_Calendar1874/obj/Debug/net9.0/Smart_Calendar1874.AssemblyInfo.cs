@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Smart_Calendar1874")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99ff279023fe27fea91bf325909213e921686b26")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c8290a37dc68db80a2d0bcdad6c7d8aa7aca6ac9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Smart_Calendar1874")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Smart_Calendar1874")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

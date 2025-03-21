@@ -15,10 +15,13 @@ public class Smart_Calendar1874 : Bot
         new Smart_Calendar1874().Start();
     }
 
+    // Constructor, which loads the bot config file
     Smart_Calendar1874() : base(BotInfo.FromFile("Smart_Calendar1874.json")) { }
 
+    // Called when a new round is started -> initialize and do some movement
     public override void Run()
     {
+        // Set colors
         BodyColor = Color.Red;
         TurretColor = Color.Black;
         RadarColor = Color.Yellow;
@@ -35,6 +38,7 @@ public class Smart_Calendar1874 : Bot
 
         BodyColor = Color.Yellow;
         TurnLeft(90);
+        // Spin gun back and forth
         while (IsRunning)
         {
             TurnGunRight(180);
@@ -105,9 +109,11 @@ public class Smart_Calendar1874 : Bot
         SmartFire(distance);
     }
 
+    // Custom fire method that determines firepower based on distance.
+    // distance: The distance to the bot to fire at.
     private void SmartFire(double distance)
     {
-        if (distance > 200 || Energy < 25)
+        if (distance > 200 || Energy < 15)
             Fire(1);
         else if (distance > 50)
             Fire(2);
@@ -119,36 +125,28 @@ public class Smart_Calendar1874 : Bot
     private void MoveWhenHit()
     {
         // 1. Move forward 100 units when hit
-        TargetSpeed = 8;
         Forward(100);
 
         // 2. If near a corner, turn right 90°
         if (IsNearCorner())
         {
+            Console.WriteLine("Near corner! Turning right 90°...");
             TurnRight(90);
         }
     }
 
+    // Helper function to check if bot is near a corner
     private bool IsNearCorner()
     {
-        return (X < SAFE_DISTANCE || X > (ArenaWidth - SAFE_DISTANCE)) &&
-           ( Y < SAFE_DISTANCE || Y > (ArenaHeight - SAFE_DISTANCE));
+        return X < SAFE_DISTANCE || X > (ArenaWidth - SAFE_DISTANCE) ||
+            Y < SAFE_DISTANCE || Y > (ArenaHeight - SAFE_DISTANCE);
     }
 
+    // Event: When the bot gets hit by a bullet
     public override void OnHitByBullet(HitByBulletEvent e)
     {
+        Console.WriteLine("⚠ Got hit! Moving to avoid more shots...");
         MoveWhenHit();
-    }
-
-    public override void OnHitWall(HitWallEvent e){
-        double bearing = CalcBearing(Direction);
-        if(bearing >= -90 && bearing <= 90){
-            Back(50);
-        }else{
-            Forward(50);
-        }
-        FindNearestWall();
-        MoveToNearestWall();
     }
 
 }
