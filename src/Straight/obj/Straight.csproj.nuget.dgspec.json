@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\Straight\\Straight.csproj": {}
+    "C:\\Users\\Mayla\\Documents\\Kuliah\\Semester-4\\Strategi-Algoritma\\Tubes1_Dunggulge-Dunggulge\\src\\Straight\\Straight.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\Straight\\Straight.csproj": {
+    "C:\\Users\\Mayla\\Documents\\Kuliah\\Semester-4\\Strategi-Algoritma\\Tubes1_Dunggulge-Dunggulge\\src\\Straight\\Straight.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\Straight\\Straight.csproj",
+        "projectUniqueName": "C:\\Users\\Mayla\\Documents\\Kuliah\\Semester-4\\Strategi-Algoritma\\Tubes1_Dunggulge-Dunggulge\\src\\Straight\\Straight.csproj",
         "projectName": "Straight",
-        "projectPath": "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\Straight\\Straight.csproj",
-        "packagesPath": "C:\\Users\\Syifa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\Straight\\obj\\",
+        "projectPath": "C:\\Users\\Mayla\\Documents\\Kuliah\\Semester-4\\Strategi-Algoritma\\Tubes1_Dunggulge-Dunggulge\\src\\Straight\\Straight.csproj",
+        "packagesPath": "C:\\Users\\Mayla\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mayla\\Documents\\Kuliah\\Semester-4\\Strategi-Algoritma\\Tubes1_Dunggulge-Dunggulge\\src\\Straight\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Syifa\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Mayla\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"

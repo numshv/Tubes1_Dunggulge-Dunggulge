@@ -6,12 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v9.0": {
-      "RobotLala/1.0.0": {
+      "Satu/1.0.0": {
         "dependencies": {
           "Robocode.TankRoyale.BotApi": "0.30.0"
         },
         "runtime": {
-          "RobotLala.dll": {}
+          "Satu.dll": {}
         }
       },
       "Microsoft.Build.Locator/1.7.8": {
@@ -193,7 +193,7 @@
     }
   },
   "libraries": {
-    "RobotLala/1.0.0": {
+    "Satu/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

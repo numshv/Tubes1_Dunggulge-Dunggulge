@@ -5,9 +5,6 @@ using Robocode.TankRoyale.BotApi.Events;
 
 public class Kotak : Bot
 {
-    int turnCounter;
-    int hitByBulletCounter;
-    // The main method starts our bot
     static void Main(string[] args)
     {
         new Kotak().Start();
@@ -20,93 +17,82 @@ public class Kotak : Bot
     public override void Run()
     {
 
-        BodyColor = Color.FromArgb(0xFF, 0x8C, 0x00);   // Dark Orange
-        TurretColor = Color.FromArgb(0xFF, 0xA5, 0x00); // Orange
-        RadarColor = Color.FromArgb(0xFF, 0xD7, 0x00);  // Gold
-        BulletColor = Color.FromArgb(0xFF, 0x45, 0x00); // Orange-Red
-        ScanColor = Color.FromArgb(0xFF, 0xFF, 0x00);   // Bright Yellow 
-        TracksColor = Color.FromArgb(0x99, 0x33, 0x00); // Dark   Brownish-Orange
-        GunColor = Color.FromArgb(0xCC, 0x55, 0x00);    // Medium Orange
+        BodyColor = Color.FromArgb(0xA8, 0xD5, 0x8E);   // Soft Light Green
+        TurretColor = Color.FromArgb(0x80, 0xC6, 0x66); // Light Olive Green
+        RadarColor = Color.FromArgb(0xB4, 0xD8, 0xA1);  // Pastel Green
+        BulletColor = Color.FromArgb(0x6A, 0xA1, 0x6E); // Moss Green
+        ScanColor = Color.FromArgb(0xA3, 0xC8, 0x87);   // Pale Green
+        TracksColor = Color.FromArgb(0x9B, 0xD4, 0x83); // Mint Green
+        GunColor = Color.FromArgb(0x7F, 0xB7, 0x6F);    // Fern Green
 
-        // Repeat while the bot is running
-		turnCounter = 0;
+
         FindTargetPosition();
-        
-        // AdjustGunForBodyTurn = false;  // Gun does not turn with body
-        // AdjustRadarForBodyTurn = false;  // Radar does not turn with body
+        TargetSpeed = 6;
 
         while (IsRunning)
         {
-            //TurnRate = 10;
-            GunTurnRate = 15;
-            
-            TargetSpeed = 6;
-            Forward(300);
-            TurnLeft(90);
-            TurnGunRight(360);
 
+            if (X > ArenaWidth * 0.8 || X < ArenaWidth * 0.2 || Y > ArenaHeight * 0.8 || Y < ArenaHeight * 0.2)
+            {
+                FindTargetPosition();
+            }
+            GunTurnRate = 15;
+            Forward(200);
+            TurnLeft(90);
         }
     }
 
     private void FindTargetPosition()
     {
-        double targetY = 0.75 * ArenaHeight;
-        double targetX = 0.75 * ArenaWidth;
+        double targetX = 0.5 * ArenaWidth;
+        double targetY = 0.5 * ArenaHeight;
         
-        Forward(Math.Sqrt((targetX - X) * (targetX - X) + (targetY - Y) * (targetY - Y)));
+        // Calculate angle to the target position
+        double angleToTarget = Math.Atan2(targetY - Y, targetX - X) * 180 / Math.PI;
+        double turnAngle = findAngle(angleToTarget);
+        TurnLeft(turnAngle);
+        
+        // Move towards the target position
+        double distanceToTarget = Math.Sqrt((targetX - X) * (targetX - X) + (targetY - Y) * (targetY - Y));
+        Forward(distanceToTarget);
 
-        //TurnLeft(360-Direction);
+        TurnLeft(360-Direction);
+    }
+
+    private double findAngle(double angle)
+    {
+        double turnAngle = angle - Direction;
+        while (turnAngle > 180) turnAngle -= 360;
+        while (turnAngle < -180) turnAngle += 360;
+        return turnAngle;
     }
 
     public override void OnScannedBot(ScannedBotEvent e)
     {
         var distance = DistanceTo(e.X, e.Y);
-        if (distance > 200 || Energy < 25){
+        if (distance > 200 || Energy < 30){
             Fire(1);
-        } else if (distance > 50){
+        } else if (distance > 100 && distance < 200){
             Fire(2);
+        } else if (distance < 50){
+            Fire(3);
         }
     }
 
     public override void OnHitWall(HitWallEvent e)
     {
-        Back(20);
+        Back(100);
         FindTargetPosition();
     }
 
     public override void OnHitBot(HitBotEvent e)
     {
-        // var bearing = BearingTo(e.X, e.Y);
-        // if (bearing > -10 && bearing < 10)
-        // {
-        //     var dir = DirectionTo(e.X, e.Y);
-        //     TurnGunRight(dir);
-        //     TurnRadarRight(dir);
-        //     Fire(3);
-        // }
-        if (e.IsRammed)
-        {
-            Back(10);
-        }
+        Back(30);
     }
 
     public override void OnHitByBullet(HitByBulletEvent e)
     {
-        TargetSpeed = 8; // Set the bot's speed to 8 when hit by a bullet
-        hitByBulletCounter = 0; // Reset the counter each time a bullet hits the bot
+        Back(30);
     }
-
-    public override void OnTick(TickEvent e)
-    {
-        if (hitByBulletCounter > 100) // After 100 turns (you can adjust this number)
-        {
-            TargetSpeed = 6; // Reset speed back to original speed
-        }
-        else
-        {
-            hitByBulletCounter++; // Increase counter
-        }
-    }
-
 }
 
