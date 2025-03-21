@@ -14,13 +14,13 @@ public class CircularMG : Bot
 
     public override void Run()
     {
-        BodyColor = Color.FromArgb(0xAD, 0xD8, 0xE6);
-        TurretColor = Color.FromArgb(0x00, 0x00, 0x00);
-        RadarColor = Color.FromArgb(0xAD, 0xD8, 0xE6);
-        BulletColor = Color.FromArgb(0x00, 0x00, 0xFF);
-        ScanColor = Color.FromArgb(0xD8, 0xBF, 0xD8);
-        TracksColor = Color.FromArgb(0x80, 0x00, 0x80);
-        GunColor = Color.FromArgb(0x30, 0x19, 0x34);
+        BodyColor = Color.FromArgb(0xAD, 0xD8, 0xE6);   // Light Blue
+        TurretColor = Color.FromArgb(0x00, 0x00, 0x00); // Black
+        RadarColor = Color.FromArgb(0xAD, 0xD8, 0xE6);  // Light Blue
+        BulletColor = Color.FromArgb(0x00, 0x00, 0xFF); // Blue
+        ScanColor = Color.FromArgb(0xD8, 0xBF, 0xD8);   // Light Purple
+        TracksColor = Color.FromArgb(0x80, 0x00, 0x80); // Purple
+        GunColor = Color.FromArgb(0x30, 0x19, 0x34);    // Dark Purple
         while (IsRunning)
         {
             // Terus berputar untuk mendeteksi musuh
