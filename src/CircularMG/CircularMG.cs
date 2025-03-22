@@ -26,18 +26,17 @@ public class CircularMG : Bot
         GunColor = Color.FromArgb(0x30, 0x19, 0x34);    // Dark Purple
         while (IsRunning)
         {
-            // Keep spinning to scan for enemies
+            // Keep moving in a circle to scan for enemies and hard to target by enemies
             TurnGunLeft(360);
             TargetSpeed = 4;
             TurnRate = 5;
         }
     }
 
-    // Function to determine the power of the shot based on the enemy's energy
+    // Function for scanning the other bots
     public override void OnScannedBot(ScannedBotEvent e)
     {
-        Console.WriteLine($"Detected bot at ({e.X}, {e.Y})");
-        //Menentukan kekuatan tembakan sesuai dengan energi bot musuh
+        // Determine the power of the shot based on the enemy's energy
         double firePower;
         if (e.Energy > 50) {
             firePower = 1;
@@ -50,7 +49,6 @@ public class CircularMG : Bot
     // When the bot is hit by a bullet -> dodge
     public override void OnHitBot(HitBotEvent e)
     {
-        Console.WriteLine($"Hit bot at ({e.X}, {e.Y})");
         TargetSpeed = 4;
         Back(100); 
         TurnRight(45); 
@@ -60,10 +58,9 @@ public class CircularMG : Bot
     // When hit the wall -> turn back
     public override void OnHitWall(HitWallEvent e)
     {
-        Console.WriteLine("Hit a wall, turning back!");
         Back(50);
         TurnRight(90);
-        for (int i = 0; i < 4; i++) { // Keep spinning to confuse the enemies
+        for (int i = 0; i < 4; i++) { // Spinning to confuse the enemies
             TargetSpeed = 5;
             TurnRate = 20;
         }
@@ -72,7 +69,6 @@ public class CircularMG : Bot
     // Saat terkena peluru -> menghindar
     public override void OnHitByBullet(HitByBulletEvent e)
     {
-        Console.WriteLine("Hit by a bullet! Dodging...");
         // Keep the information of the bullet direction to determine the movement
         double bulletDirection = e.Bullet.Direction;
         if (bulletDirection > -90 && bulletDirection < 90)
