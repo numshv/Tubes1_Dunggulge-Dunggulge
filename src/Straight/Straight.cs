@@ -105,7 +105,6 @@ public class Straight : Bot
         TurnTo(0);
     }
 
-
     private void TurnTo(double angle)
     {
         double turnAngle = angle - Direction;
@@ -122,8 +121,6 @@ public class Straight : Bot
     }
 
 
-
-    // We saw another bot -> stop and fire!
     public override void OnScannedBot(ScannedBotEvent e)
     {
         var distance = DistanceTo(e.X, e.Y);
@@ -131,8 +128,6 @@ public class Straight : Bot
         SmartFire(distance);
     }
 
-    // Custom fire method that determines firepower based on distance.
-    // distance: The distance to the bot to fire at.
     private void SmartFire(double distance)
     {
         if (distance > 200 || Energy < 15)
