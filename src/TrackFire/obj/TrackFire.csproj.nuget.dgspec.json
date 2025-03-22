@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Syifa\\Desktop\\sample-bots\\TrackFire\\TrackFire.csproj": {}
+    "D:\\Downloads\\STIMA GITHUB\\Tubes1_Dunggulge-Dunggulge\\src\\TrackFire\\TrackFire.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Syifa\\Desktop\\sample-bots\\TrackFire\\TrackFire.csproj": {
+    "D:\\Downloads\\STIMA GITHUB\\Tubes1_Dunggulge-Dunggulge\\src\\TrackFire\\TrackFire.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Syifa\\Desktop\\sample-bots\\TrackFire\\TrackFire.csproj",
+        "projectUniqueName": "D:\\Downloads\\STIMA GITHUB\\Tubes1_Dunggulge-Dunggulge\\src\\TrackFire\\TrackFire.csproj",
         "projectName": "TrackFire",
-        "projectPath": "C:\\Users\\Syifa\\Desktop\\sample-bots\\TrackFire\\TrackFire.csproj",
-        "packagesPath": "C:\\Users\\Syifa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Syifa\\Desktop\\sample-bots\\TrackFire\\obj\\",
+        "projectPath": "D:\\Downloads\\STIMA GITHUB\\Tubes1_Dunggulge-Dunggulge\\src\\TrackFire\\TrackFire.csproj",
+        "packagesPath": "C:\\Users\\a1400\\.nuget\\packages\\",
+        "outputPath": "D:\\Downloads\\STIMA GITHUB\\Tubes1_Dunggulge-Dunggulge\\src\\TrackFire\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Syifa\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\a1400\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"

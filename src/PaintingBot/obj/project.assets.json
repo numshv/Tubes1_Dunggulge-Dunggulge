@@ -212,19 +212,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Syifa\\.nuget\\packages\\": {}
+    "C:\\Users\\a1400\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\PaintingBot\\PaintingBot.csproj",
+      "projectUniqueName": "D:\\Downloads\\STIMA GITHUB\\Tubes1_Dunggulge-Dunggulge\\src\\PaintingBot\\PaintingBot.csproj",
       "projectName": "PaintingBot",
-      "projectPath": "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\PaintingBot\\PaintingBot.csproj",
-      "packagesPath": "C:\\Users\\Syifa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Syifa\\Desktop\\Tubes1_Dunggulge-Dunggulge\\src\\PaintingBot\\obj\\",
+      "projectPath": "D:\\Downloads\\STIMA GITHUB\\Tubes1_Dunggulge-Dunggulge\\src\\PaintingBot\\PaintingBot.csproj",
+      "packagesPath": "C:\\Users\\a1400\\.nuget\\packages\\",
+      "outputPath": "D:\\Downloads\\STIMA GITHUB\\Tubes1_Dunggulge-Dunggulge\\src\\PaintingBot\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Syifa\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\a1400\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"

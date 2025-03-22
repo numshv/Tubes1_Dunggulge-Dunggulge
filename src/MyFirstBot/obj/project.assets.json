@@ -212,19 +212,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Syifa\\.nuget\\packages\\": {}
+    "C:\\Users\\a1400\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Syifa\\Desktop\\sample-bots-csharp-0.30.1\\MyFirstBot\\MyFirstBot.csproj",
+      "projectUniqueName": "D:\\Downloads\\STIMA GITHUB\\Tubes1_Dunggulge-Dunggulge\\src\\MyFirstBot\\MyFirstBot.csproj",
       "projectName": "MyFirstBot",
-      "projectPath": "C:\\Users\\Syifa\\Desktop\\sample-bots-csharp-0.30.1\\MyFirstBot\\MyFirstBot.csproj",
-      "packagesPath": "C:\\Users\\Syifa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Syifa\\Desktop\\sample-bots-csharp-0.30.1\\MyFirstBot\\obj\\",
+      "projectPath": "D:\\Downloads\\STIMA GITHUB\\Tubes1_Dunggulge-Dunggulge\\src\\MyFirstBot\\MyFirstBot.csproj",
+      "packagesPath": "C:\\Users\\a1400\\.nuget\\packages\\",
+      "outputPath": "D:\\Downloads\\STIMA GITHUB\\Tubes1_Dunggulge-Dunggulge\\src\\MyFirstBot\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Syifa\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\a1400\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
