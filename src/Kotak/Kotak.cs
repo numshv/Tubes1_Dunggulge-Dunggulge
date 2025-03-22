@@ -69,13 +69,15 @@ public class Kotak : Bot
 
     public override void OnScannedBot(ScannedBotEvent e)
     {
-        var distance = DistanceTo(e.X, e.Y);
-        if (distance > 200 || Energy < 30){
-            Fire(1);
-        } else if (distance > 100 && distance < 200){
-            Fire(2);
-        } else if (distance < 50){
-            Fire(3);
+        if (checkEnergy()){
+            var distance = DistanceTo(e.X, e.Y);
+            if (distance > 200 || Energy < 30){
+                Fire(1);
+            } else if (distance > 100 && distance < 200){
+                Fire(2);
+            } else if (distance < 50){
+                Fire(3);
+            }
         }
     }
 
@@ -93,6 +95,10 @@ public class Kotak : Bot
     public override void OnHitByBullet(HitByBulletEvent e)
     {
         Back(30);
+    }
+
+    private bool checkEnergy(){
+        return Energy > 10;
     }
 }
 
