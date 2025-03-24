@@ -69,7 +69,7 @@ Dan gunakan perintah ini juga device anda berbasis Linux/MacOS
 ./[nama bot].sh
 ```
 
-Di Robocode Tank Royale GUI, klik tombol "Config" lalu tombol "Bot Root Directories" dan masukkan directory yang berisi folder-folder bot.
+Di Robocode Tank Royale GUI, klik tombol "Config" lalu tombol "Bot Root Directories" dan masukkan directory yang berisi folder-folder bot. Untuk alternative bots, masuk ke direktori alt-bot-[nomor] dan untuk main bot masuk ke direktori main-bot.
 <br />
 <br />
 Untuk menjalankan sebuah battle, klik tombol "Battle" lalu tombol "Start Battle". 
