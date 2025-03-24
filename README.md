@@ -77,5 +77,8 @@ Bot yang telah ditambahkan akan otomatis muncul pada kotak kanan-bawah.
 <br />
 Anda dapat memulai permainan dengan  menekan tombol “Start Battle”.
 
-### Kontribusi
-Apabila Anda ingin berkontribusi dalam projek ini, silakan fork repository ini dan gunakan feature branch. Pull requests akan diterima dengan hangat.
+### Author
+13523016 - Clarissa Nethania Tambunan - K01
+13523050 - Mayla Yaffa Ludmilla - K01
+13523058 - Noumisyifa Nabila Nareswari - K01
+
