@@ -2,7 +2,7 @@
   "name": "CircularMG",
   "version": "1.0",
   "authors": ["Clarissa N. Tambunan", "Mayla Yaffa L.", "Noumisyifa Nabila N."],
-  "description": "A bot that drives in cicular motion and shoots at the same time.",
+  "description": "Bot yang bergerak dalam pola lingkaran sekaligus menembak dengan mempertimbangkan energi musuh.",
   "homepage": "",
   "countryCodes": ["id"],
   "platform": ".Net 9.0",
