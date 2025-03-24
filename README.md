@@ -38,7 +38,17 @@ Bot CircularMG adalah bot yang bergerak dalam pola lingkaran untuk menghindari s
 
 ## Tech Stack
 - Robocode API
-- C++
+- C#
+
+## Get Started
+
+- Pastikan .NET telah terinstal. Jika belum, Anda dapat mengunduhnya di:
+  [Download .NET](https://dotnet.microsoft.com/id-id/download)
+
+- Download file .zip pada release terbaru atau clone repository ini secara keseluruhan.
+
+- Pastikan GUI Robocode telah terinstal. Jika belum, Anda dapat mengunduhnya di:
+  [Download Robocode GUI](https://github.com/Ariel-HS/tubes1-if2211-starter-pack/releases/tag/v1.0)
 
 ## Cara Menjalankan Program
 Clone repositori ini dengan perintah berikut.
@@ -50,15 +60,14 @@ Navigasi ke repositori yang sudah di-clone, lalu jalankan GUI Robocode Tank Roya
 ```shell
 java -jar robocode-tankroyale-gui-0.30.0.jar
 ```
-Untuk setiap bot, navigasi ke direktori masing-masing bot dan jalankan perintah berikut.
+Untuk setiap bot, navigasi ke direktori masing-masing bot dan jalankan perintah berikut untuk build masing-masing bot. Gunakan perintah ini juga device anda berbasis Windows
 ```shell
 ./[nama bot].cmd
 ```
-(untuk Windows) 
+Dan gunakan perintah ini juga device anda berbasis Linux/MacOS
 ```shell
 ./[nama bot].sh
 ```
-(Untuk Linux/macOS)
 
 Di Robocode Tank Royale GUI, klik tombol "Config" lalu tombol "Bot Root Directories" dan masukkan directory yang berisi folder-folder bot.
 <br />
