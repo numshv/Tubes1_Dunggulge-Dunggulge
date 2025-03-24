@@ -32,3 +32,37 @@ C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-D
 C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\Smart_Calendar1874\obj\Debug\net9.0\Smart_Calendar1874.pdb
 C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\Smart_Calendar1874\obj\Debug\net9.0\Smart_Calendar1874.genruntimeconfig.cache
 C:\Users\Mayla\Documents\Kuliah\Semester-4\Strategi-Algoritma\Tubes1_Dunggulge-Dunggulge\src\Smart_Calendar1874\obj\Debug\net9.0\ref\Smart_Calendar1874.dll
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\bin\Debug\net9.0\Smart_Calendar1874.exe
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\bin\Debug\net9.0\Smart_Calendar1874.deps.json
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\bin\Debug\net9.0\Smart_Calendar1874.runtimeconfig.json
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\bin\Debug\net9.0\Smart_Calendar1874.dll
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\bin\Debug\net9.0\Smart_Calendar1874.pdb
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\bin\Debug\net9.0\Microsoft.Build.Locator.dll
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Binder.dll
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\bin\Debug\net9.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Json.dll
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Physical.dll
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\bin\Debug\net9.0\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\bin\Debug\net9.0\Microsoft.Win32.SystemEvents.dll
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\bin\Debug\net9.0\Newtonsoft.Json.dll
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\bin\Debug\net9.0\Robocode.TankRoyale.BotApi.dll
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\bin\Debug\net9.0\SVG.dll
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\bin\Debug\net9.0\System.Drawing.Common.dll
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\bin\Debug\net9.0\System.Private.Windows.Core.dll
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\bin\Debug\net9.0\runtimes\win\lib\net9.0\Microsoft.Win32.SystemEvents.dll
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\obj\Debug\net9.0\Smart_Calendar1874.csproj.AssemblyReference.cache
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\obj\Debug\net9.0\Smart_Calendar1874.GeneratedMSBuildEditorConfig.editorconfig
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\obj\Debug\net9.0\Smart_Calendar1874.AssemblyInfoInputs.cache
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\obj\Debug\net9.0\Smart_Calendar1874.AssemblyInfo.cs
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\obj\Debug\net9.0\Smart_Calendar1874.csproj.CoreCompileInputs.cache
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\obj\Debug\net9.0\Smart_Calendar1874.sourcelink.json
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\obj\Debug\net9.0\Smart_Ca.6249E5D9.Up2Date
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\obj\Debug\net9.0\Smart_Calendar1874.dll
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\obj\Debug\net9.0\refint\Smart_Calendar1874.dll
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\obj\Debug\net9.0\Smart_Calendar1874.pdb
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\obj\Debug\net9.0\Smart_Calendar1874.genruntimeconfig.cache
+D:\Downloads\STIMA GITHUB\Tubes1_Dunggulge-Dunggulge\src\alternative-bots\alt-bot-3\Smart_Calendar1874\obj\Debug\net9.0\ref\Smart_Calendar1874.dll

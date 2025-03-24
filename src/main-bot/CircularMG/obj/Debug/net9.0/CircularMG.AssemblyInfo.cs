@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CircularMG")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+59240bd4507c34646e6a4d7c767f8adcf632dedc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3d7741e4024d623c3c3d23f36bfc8cd4ee4995c5")]
 [assembly: System.Reflection.AssemblyProductAttribute("CircularMG")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CircularMG")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
