@@ -1,11 +1,10 @@
 {
-    "name": "Dunggulge Dunggulge",
-    "version": "1.0",
-    "authors": [ "Noumisyifa Nabila N.", "Mayla Yaffa L.", "Clarissa N. Tambunan"],
-    "description": "blm twwww",
-    "homepage": "",
-    "countryCodes": [ "id" ],
-    "platform": ".Net",
-    "programmingLang": "C#"
-  }
-  
+  "name": "Smart_Calendar1874",
+  "version": "1.0",
+  "authors": [ "Noumisyifa Nabila N.", "Mayla Yaffa L.", "Clarissa N. Tambunan"],
+  "description": "Diam di dekat dinding dan terus scan dan menembak dengan range 360 deg. Bergerak menyusuri dinding jika tertembak",
+  "homepage": "",
+  "countryCodes": [ "id" ],
+  "platform": ".Net",
+  "programmingLang": "C#"
+}

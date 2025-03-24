@@ -25,18 +25,19 @@ public class Kotak : Bot
         TracksColor = Color.FromArgb(0x9B, 0xD4, 0x83); // Mint Green
         GunColor = Color.FromArgb(0x7F, 0xB7, 0x6F);    // Fern Green
 
-
+        // Di awal, langsung mencari posisi di tengah arena
         FindTargetPosition();
         TargetSpeed = 6;
 
         while (IsRunning)
         {
-
+            // Jika bot sudah berada di pinggir arena, kembali ke tengah arena
             if (X > ArenaWidth * 0.8 || X < ArenaWidth * 0.2 || Y > ArenaHeight * 0.8 || Y < ArenaHeight * 0.2)
             {
                 FindTargetPosition();
             }
             GunTurnRate = 15;
+            // Bergerak dengan jalur berbentuk kotak
             Forward(200);
             TurnLeft(90);
         }
@@ -44,21 +45,24 @@ public class Kotak : Bot
 
     private void FindTargetPosition()
     {
+        // Posisi target adalah di tengah arena
         double targetX = 0.5 * ArenaWidth;
         double targetY = 0.5 * ArenaHeight;
         
-        // Calculate angle to the target position
+        // Menghitung arah derajat ke posisi target
         double angleToTarget = Math.Atan2(targetY - Y, targetX - X) * 180 / Math.PI;
         double turnAngle = findAngle(angleToTarget);
         TurnLeft(turnAngle);
         
-        // Move towards the target position
+        // Bergerak ke posisi target
         double distanceToTarget = Math.Sqrt((targetX - X) * (targetX - X) + (targetY - Y) * (targetY - Y));
         Forward(distanceToTarget);
 
+        // Meluruskan badan bot
         TurnLeft(360-Direction);
     }
 
+    // Fungsi untuk menemukan seberapa jauh bot harus berputar untuk menuju arah yang diinginkan
     private double findAngle(double angle)
     {
         double turnAngle = angle - Direction;
@@ -67,9 +71,12 @@ public class Kotak : Bot
         return turnAngle;
     }
 
+    // Fungsi ketika berhasil memindai bot
     public override void OnScannedBot(ScannedBotEvent e)
     {
+        // Menembak apabila energi cukup
         if (checkEnergy()){
+            // Kuatnya tembakan berdasarkan jarak bot musuh dan energi bot ini
             var distance = DistanceTo(e.X, e.Y);
             if (distance > 200 || Energy < 30){
                 Fire(1);
@@ -81,22 +88,31 @@ public class Kotak : Bot
         }
     }
 
+    // Fungsi ketika bot menabrak tembok
+    // Walaupun bot didesain untuk terus berada di tengah, bot bisa menabrak tembok
+    // apabila bot harus terus menerus ditabrak/menghindar dari bot lain
     public override void OnHitWall(HitWallEvent e)
     {
+        // Bergerak mundur lalu kembali ke tengah arena
         Back(100);
         FindTargetPosition();
     }
 
+    // Fungsi ketika bot menabrak bot lain
     public override void OnHitBot(HitBotEvent e)
     {
+        // Bergerak mundur
         Back(30);
     }
 
+    // Fungsi ketika terkena tembakan bot lain
     public override void OnHitByBullet(HitByBulletEvent e)
     {
+        // Bergerak mundur
         Back(30);
     }
 
+    // Fungsi untuk mengecek apakah energi bot masih lebih dari 10
     private bool checkEnergy(){
         return Energy > 10;
     }

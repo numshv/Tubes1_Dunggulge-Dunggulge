@@ -6,105 +6,97 @@ using Robocode.TankRoyale.BotApi.Events;
 public class Straight : Bot
 {
 
-    private const double SAFE_DISTANCE = 25; 
+    // Margin dari tembok agar tidak nabrak
+    private const double SAFE_DISTANCE = 25;
+    // Titik awal tujuan bot 
     private double targetX, targetY;
+    private int waitTicks = 0; // Counter to track waiting time
+    private bool movingForward;
     
-
-    // The main method starts our bot
     static void Main(string[] args)
     {
         new Straight().Start();
     }
 
-    // Constructor, which loads the bot config file
+    // Constructor
     Straight() : base(BotInfo.FromFile("Straight.json")) { }
 
-    // Called when a new round is started -> initialize and do some movement
     public override void Run()
     {
-        targetX = SAFE_DISTANCE;
-        targetY = ArenaHeight/2;
+        GunTurnRate = 20; 
+        TargetSpeed = 5;
         // Set colors
-        BodyColor = Color.Red;
-        TurretColor = Color.Black;
-        RadarColor = Color.Yellow;
-        BulletColor = Color.Green;
-        ScanColor = Color.Green;
+        BodyColor = Color.FromArgb(0x73, 0x65, 0x4A);
+        TurretColor = Color.FromArgb(0xA4, 0x8D, 0x6A);
+        RadarColor = Color.FromArgb(0xBD, 0xA5, 0x83);
+        BulletColor = Color.FromArgb(0x52, 0x48, 0x39);
+        ScanColor = Color.FromArgb(0xE6, 0xCE, 0xAC);
 
-        bool movingForward = true; // Track movement direction
+        DecideFirstPos();
 
         while (!OnTargetCoord())
         {
             MoveToMiddleLeft();
         }
 
-        int i=0;
-
         while (IsRunning)
         {
-            GunTurnRate = 20;
-            TargetSpeed = 5;
+            
+            // GunTurnRate = 20; 
+            // TargetSpeed = 5;
+
             if (movingForward)
             {
-                // Move forward until reaching X = ArenaWidth - SAFE_DISTANCE
                 if (X <= ArenaWidth - SAFE_DISTANCE)
                 {
-                    i++;
-                    if(i%2==0){
-                        BodyColor = Color.Yellow;
-                    }
-                    else{
-                        BodyColor = Color.Yellow;
-                    }
-                    Forward(ArenaWidth-(SAFE_DISTANCE*2)); // Move in steps to allow checking
+                    // Maju hingga X = ArenaWidth - SAFE_DISTANCE
+                    Forward(ArenaWidth-(SAFE_DISTANCE*2)); 
                 }
                 else
                 {
-                    movingForward = false; // Switch to moving backward
+                    movingForward = false; // Ubah jadi gerak mundur
                 }
             }
             else
             {
-                // Move backward until reaching X = SAFE_DISTANCE
                 if (X > SAFE_DISTANCE)
                 {
-                    i++;
-                    if(i%2==0){
-                        BodyColor = Color.Yellow;
-                    }
-                    else{
-                        BodyColor = Color.Yellow;
-                    }
+                    // Mundur hingga X = SAFE_DISTANCE
                     Back(ArenaWidth-(SAFE_DISTANCE*2)); // Move in steps to allow checking
                 }
                 else
                 {
-                    movingForward = true; // Switch back to moving forward
+                    movingForward = true; // Ubah kembali jadi maju
                 }
             }
-
-            // Continuously rotate gun 360° while moving
             
         }
         
     }
 
+    private void DecideFirstPos(){
+        targetY = ArenaHeight/2;
+        if(X <= (ArenaWidth/2)){
+            targetX = SAFE_DISTANCE;
+            movingForward = true; // Track movement direction
+        }
+        else{
+            targetX = ArenaWidth - SAFE_DISTANCE;
+            movingForward = false;
+        }
+    }
 
+    //Fungsi untuk ke tengah kiri saat mulai awal round
     private void MoveToMiddleLeft()
     {
-        // Calculate the angle to move towards (25, ArenaHeight / 2)
+
         double angleToTarget = Math.Atan2(targetY - Y, targetX - X) * 180 / Math.PI;
-        
-        // Turn towards the target position
         TurnTo(angleToTarget);
-
-        // Move to (25, ArenaHeight / 2)
         Forward(Math.Sqrt((targetX - X) * (targetX - X) + (targetY - Y) * (targetY - Y)));
-
-        // Once there, turn left (which is 0°)
         TurnTo(0);
     }
 
+    //Fungsi untuk ke belok ke arah tertentu
     private void TurnTo(double angle)
     {
         double turnAngle = angle - Direction;
@@ -114,21 +106,22 @@ public class Straight : Bot
         TurnLeft(turnAngle);
     }
 
+    //Fungsi untuk cek apakah sudah di tengah kiri atau belum
     private bool OnTargetCoord()
     {
         return Math.Abs(X - targetX) < SAFE_DISTANCE &&
             Math.Abs(Y - targetY) < SAFE_DISTANCE; 
     }
 
-
+    //Event based function yang akan menembak ketika memindai bot
     public override void OnScannedBot(ScannedBotEvent e)
     {
         var distance = DistanceTo(e.X, e.Y);
-
-        SmartFire(distance);
+        DorDor(distance);
     }
 
-    private void SmartFire(double distance)
+    //Fungsi untuk mengatur kekuatan tembakan sesuai jarak bot target
+    private void DorDor(double distance)
     {
         if (distance > 200 || Energy < 15)
             Fire(1);
@@ -136,6 +129,35 @@ public class Straight : Bot
             Fire(2);
         else
             Fire(3);
+    }
+
+    // Fungsi untuk melakukan gerakan ketika menabrak bot lain
+    public override void OnHitBot(HitBotEvent botHitBotEvent)
+    {
+        Back(60);  
+        waitTicks = 30;  
+        Console.WriteLine("rammed" + waitTicks);
+    }
+
+    // Fungsi untuk melakukan gerakan yang perlu dianalisis per tick
+    public override void OnTick(TickEvent tickEvent)
+    {
+        if (waitTicks > 0) // If waiting period is active
+        {
+            waitTicks--;
+            Console.WriteLine(waitTicks);
+            return; // Do nothing while waiting
+        }
+
+        if (waitTicks == 0) // Once 10 ticks have passed
+        {
+            Forward(60); // Move forward to go back to its original route
+            waitTicks = -1; 
+        }
+
+        if(Energy <= 5){ // If energi <= 5, then stop shooting
+            GunTurnRate = 0;   
+        }
     }
 
 }

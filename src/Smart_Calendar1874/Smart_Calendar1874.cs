@@ -5,9 +5,13 @@ using Robocode.TankRoyale.BotApi.Events;
 
 public class Smart_Calendar1874 : Bot
 {
-
+    // Margin dari tembok agar tidak nabrak
     private const double SAFE_DISTANCE = 25; 
+    // Titik awal tujuan bot 
     private double targetX, targetY;
+
+    private double minDistance; 
+    
 
     // The main method starts our bot
     static void Main(string[] args)
@@ -20,32 +24,34 @@ public class Smart_Calendar1874 : Bot
 
     // Called when a new round is started -> initialize and do some movement
     public override void Run()
-    {
+    { 
         // Set colors
-        BodyColor = Color.Red;
-        TurretColor = Color.Black;
-        RadarColor = Color.Yellow;
-        BulletColor = Color.Green;
-        ScanColor = Color.Green;
+        BodyColor = Color.FromArgb(0x4A, 0x24, 0x80);
+        TurretColor = Color.FromArgb(0xC5, 0x3A, 0x9D);
+        RadarColor = Color.FromArgb(0xFF, 0x8E, 0x80);
+        BulletColor = Color.FromArgb(0x05, 0x1F, 0x39);
+        ScanColor = Color.FromArgb(0xFF, 0x8E, 0x80);
 
-
+        // Cari koordinat yang diingingkan dulu
         FindNearestWall();
-
         while (!OnTargetWallCoord())
         {
+            // Jalan ke koordinat yang diinginkan
             MoveToNearestWall();
         }
 
-        BodyColor = Color.Yellow;
+        // Posisikan badan
         TurnLeft(90);
-        // Spin gun back and forth
+
         while (IsRunning)
         {
-            TurnGunRight(180);
-            TurnGunLeft(180);
+            // Terus muter dan nembak kalau dapet bot
+            TurnGunRight(360);
         }
+        
     }
 
+    // Fungsi untuk mencari koordinat dinding terdekat dari spawn point
     private void FindNearestWall()
     {
         double distanceToNorth = ArenaHeight - Y;
@@ -53,7 +59,8 @@ public class Smart_Calendar1874 : Bot
         double distanceToEast = ArenaWidth - X;
         double distanceToWest = X;
 
-        double minDistance = Math.Min(Math.Min(distanceToNorth, distanceToSouth), Math.Min(distanceToEast, distanceToWest));
+        //mindistance = shortest distance to any of the 4 walls
+        minDistance = Math.Min(Math.Min(distanceToNorth, distanceToSouth), Math.Min(distanceToEast, distanceToWest));
 
         if (minDistance == distanceToNorth)
         {
@@ -77,6 +84,7 @@ public class Smart_Calendar1874 : Bot
         }
     }
 
+    // Fungsi untuk menggerakkan bot ke targetX, targetY
     private void MoveToNearestWall()
     {
         double angleToWall = Math.Atan2(targetY - Y, targetX - X) * 180 / Math.PI;
@@ -86,6 +94,7 @@ public class Smart_Calendar1874 : Bot
         Back(Math.Sqrt((targetX - X) * (targetX - X) + (targetY - Y) * (targetY - Y)));
     }
 
+    //Fungsi untuk ke belok ke arah tertentu
     private void TurnTo(double angle)
     {
         double turnAngle = angle - Direction;
@@ -95,23 +104,22 @@ public class Smart_Calendar1874 : Bot
         TurnLeft(turnAngle);
     }
 
+    //Fungsi untuk cek apakah sudah di targetX, targetY atau belum
     private bool OnTargetWallCoord()
     {
         return Math.Abs(X - targetX) < SAFE_DISTANCE / 2 && Math.Abs(Y - targetY) < SAFE_DISTANCE / 2; 
     }
 
-
-    // We saw another bot -> stop and fire!
+    //Event based function yang akan menembak ketika memindai bot
     public override void OnScannedBot(ScannedBotEvent e)
     {
         var distance = DistanceTo(e.X, e.Y);
 
-        SmartFire(distance);
+        DorDor(distance);
     }
 
-    // Custom fire method that determines firepower based on distance.
-    // distance: The distance to the bot to fire at.
-    private void SmartFire(double distance)
+    //Fungsi untuk mengatur kekuatan tembakan sesuai jarak bot target
+    private void DorDor(double distance)
     {
         if (distance > 200 || Energy < 15)
             Fire(1);
@@ -121,32 +129,55 @@ public class Smart_Calendar1874 : Bot
             Fire(3);
     }
 
-
+    // Fungsi untuk bergerak ketika bot terkena peluru
     private void MoveWhenHit()
     {
-        // 1. Move forward 100 units when hit
-        Forward(100);
-
-        // 2. If near a corner, turn right 90°
-        if (IsNearCorner())
+        
+        // Check distance based on the bot's current facing direction
+        Console.WriteLine(Direction);
+        if (Direction == 180) 
         {
-            Console.WriteLine("Near corner! Turning right 90°...");
-            TurnRight(90);
+            minDistance = X - SAFE_DISTANCE; // Distance to left wall
         }
+        else if (Direction == 270) 
+        {
+            minDistance = Y - SAFE_DISTANCE; // Distance to top wall
+        }
+        else if (Direction == 0) 
+        {
+            minDistance = ArenaWidth - SAFE_DISTANCE - X; // Distance to right wall
+        }
+        else if (Direction == 90) 
+        {
+            minDistance = ArenaHeight - SAFE_DISTANCE - Y; // Distance to bottom wall
+        }
+
+         Console.WriteLine(minDistance);
+
+        // Adjust movement if near a wall
+        int moveDistance = (minDistance < 100 + SAFE_DISTANCE) 
+            ? (int)(minDistance - SAFE_DISTANCE) 
+            : 100;
+
+        
+
+        // If near a corner, turn 90° before moving
+        if (minDistance < (SAFE_DISTANCE + 5))
+        {
+            Console.WriteLine($"rotate, minDistance: {minDistance}");
+            TurnRight(90);
+            Forward(110);
+        }
+
+        // Move forward by adjusted distance (ensure it's not negative)
+        Forward(Math.Max(moveDistance, 0));
     }
 
-    // Helper function to check if bot is near a corner
-    private bool IsNearCorner()
-    {
-        return X < SAFE_DISTANCE || X > (ArenaWidth - SAFE_DISTANCE) ||
-            Y < SAFE_DISTANCE || Y > (ArenaHeight - SAFE_DISTANCE);
-    }
-
-    // Event: When the bot gets hit by a bullet
+    // Fungsi event based yang akan menjalankan movewhenhit() ketika tertembaks
     public override void OnHitByBullet(HitByBulletEvent e)
     {
-        Console.WriteLine("⚠ Got hit! Moving to avoid more shots...");
         MoveWhenHit();
     }
+        
 
 }

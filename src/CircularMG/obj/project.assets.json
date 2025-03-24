@@ -817,19 +817,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\a1400\\.nuget\\packages\\": {}
+    "C:\\Users\\Mayla\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Downloads\\STIMA GITHUB\\Tubes1_Dunggulge-Dunggulge\\src\\CircularMG\\CircularMG.csproj",
+      "projectUniqueName": "C:\\Users\\Mayla\\Documents\\Kuliah\\Semester-4\\Strategi-Algoritma\\Tubes1_Dunggulge-Dunggulge\\src\\CircularMG\\CircularMG.csproj",
       "projectName": "CircularMG",
-      "projectPath": "D:\\Downloads\\STIMA GITHUB\\Tubes1_Dunggulge-Dunggulge\\src\\CircularMG\\CircularMG.csproj",
-      "packagesPath": "C:\\Users\\a1400\\.nuget\\packages\\",
-      "outputPath": "D:\\Downloads\\STIMA GITHUB\\Tubes1_Dunggulge-Dunggulge\\src\\CircularMG\\obj\\",
+      "projectPath": "C:\\Users\\Mayla\\Documents\\Kuliah\\Semester-4\\Strategi-Algoritma\\Tubes1_Dunggulge-Dunggulge\\src\\CircularMG\\CircularMG.csproj",
+      "packagesPath": "C:\\Users\\Mayla\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mayla\\Documents\\Kuliah\\Semester-4\\Strategi-Algoritma\\Tubes1_Dunggulge-Dunggulge\\src\\CircularMG\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\a1400\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Mayla\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"

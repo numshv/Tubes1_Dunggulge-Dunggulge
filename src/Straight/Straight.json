@@ -1,11 +1,10 @@
 {
-    "name": "Straight",
-    "version": "1.0",
-    "authors": [ "Noumisyifa Nabila N.", "Mayla Yaffa L.", "Clarissa Nethania"],
-    "description": "blm twwww",
-    "homepage": "",
-    "countryCodes": [ "id" ],
-    "platform": ".Net",
-    "programmingLang": "C#"
-  }
-  
+  "name": "Straight",
+  "version": "1.0",
+  "authors": [ "Noumisyifa Nabila N.", "Mayla Yaffa L.", "Clarissa Nethania"],
+  "description": "Bergerak horizontal di tengah secara terus menerus. Gun dan scanner terus berputar dan menembak 360 deg.",
+  "homepage": "",
+  "countryCodes": [ "id" ],
+  "platform": ".Net",
+  "programmingLang": "C#"
+}

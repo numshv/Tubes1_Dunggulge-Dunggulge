@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Kotak")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f535daf0262b7547196848e5193a218b45f4d0b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+48b1b2cea70fd39cc4816499db8eaf10fbf265e1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Kotak")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Kotak")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
